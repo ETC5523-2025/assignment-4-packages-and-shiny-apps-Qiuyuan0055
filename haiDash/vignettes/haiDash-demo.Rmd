@@ -1,0 +1,59 @@
+---
+title: "Exploring HAI data with haiDash"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Exploring HAI data with haiDash}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+library(haiDash)
+library(dplyr)
+
+Introduction
+
+The haiDash package provides tools and an interactive Shiny dashboard to explore Healthcare-Associated Infection (HAI) data.
+
+This vignette demonstrates the basic workflow: loading the data, summarising infection counts, and running the dashboard.
+
+
+1. Load the data
+
+The package includes a cleaned dataset called hai_clean:
+
+data("hai_clean")
+head(hai_clean)
+
+
+2. Summarise infection counts
+
+Use the helper function summarise_hai() to compute case totals and their relative shares by infection type:
+
+summary_tbl <- summarise_hai(hai_clean)
+summary_tbl
+
+You can also visualise the results quickly:
+
+library(ggplot2)
+ggplot(summary_tbl, aes(x = infection, y = share)) +
+  geom_col(fill = "steelblue") +
+  labs(title = "Proportion of infection types",
+       y = "Share", x = "Infection Type") +
+  theme_minimal()
+
+
+⸻
+
+3. Launch the Shiny app
+
+Run the interactive dashboard included in the package:
+
+run_app()
+
+This app allows users to filter and explore infection data dynamically.
+
+⸻
+
+Conclusion
+
+The haiDash package makes it easy to summarise and visualise infection data, and provides a Shiny interface for deeper exploration.
