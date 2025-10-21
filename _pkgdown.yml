@@ -1,0 +1,16 @@
+template:
+  bootstrap: 5
+  bootswatch: flatly
+
+home:
+  title: "haiDash: Explore Healthcare-Associated Infection Data"
+  description: >
+    The haiDash R package provides an interactive Shiny dashboard and
+    helper functions for exploring Healthcare-Associated Infection (HAI) data.
+
+navbar:
+  structure:
+    left: [home, reference, articles]
+    right: [github]
+
+url: https://etc5523-2025.github.io/haiDash/

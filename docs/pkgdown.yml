@@ -1,0 +1,6 @@
+pandoc: 3.6.3
+pkgdown: 2.1.3
+pkgdown_sha: ~
+articles:
+  haiDash-demo: haiDash-demo.html
+last_built: 2025-10-20T03:02Z
