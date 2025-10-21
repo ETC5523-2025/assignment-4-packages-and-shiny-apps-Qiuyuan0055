@@ -26,7 +26,7 @@ includes counts and infection types collected in hospital settings.
 
 You can install the development version of `haiDash` from GitHub:
 
-```{r}
+```{r, eval=FALSE}
 # install.packages("pak")
 pak::pak("ETC5523-2025/assignment-4-packages-and-shiny-apps-Qiuyuan0055/haiDash")
 ```

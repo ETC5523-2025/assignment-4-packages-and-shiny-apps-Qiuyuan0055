@@ -1,5 +1,33 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+# haiDash
+
+The **haiDash** R package provides an interactive dashboard and helper
+functions to explore **Healthcare-Associated Infection (HAI)** data from
+German PPS 2011.
+
+This package was developed as part of **ETC5523: Communicating with
+Data** Assignment 4  
+at Monash University by *Qiuyuan Chen (31112994)*.
+
+## Overview
+
+`haiDash` allows users to: - Summarise and visualise infection types and
+proportions - Explore data interactively using a Shiny dashboard -
+Demonstrate R package documentation and pkgdown site publishing
+
+The dataset used (`hai_clean`) is derived from the **BHAI** package and
+includes counts and infection types collected in hospital settings.
+
+------------------------------------------------------------------------
+
+## Installation
+
+You can install the development version of `haiDash` from GitHub:
+
+``` r
+# install.packages("pak")
+pak::pak("ETC5523-2025/assignment-4-packages-and-shiny-apps-Qiuyuan0055/haiDash")
+```
 
 # haiDash
 
@@ -17,6 +45,27 @@ You can install the development version of haiDash from
 ``` r
 # install.packages("pak")
 pak::pak("ETC5523-2025/assignment-4-packages-and-shiny-apps-Qiuyuan0055")
+```
+
+Then load the package:
+
+``` r
+library(haiDash)
+```
+
+# Data
+
+``` r
+data("hai_clean")
+head(hai_clean)
+#> # A tibble: 5 × 3
+#>   infection cases country
+#>   <chr>     <int> <chr>  
+#> 1 HAP          88 Germany
+#> 2 SSI         111 Germany
+#> 3 BSI          23 Germany
+#> 4 UTI         155 Germany
+#> 5 CDI          37 Germany
 ```
 
 ## Example
