@@ -35,8 +35,6 @@ pak::pak("ETC5523-2025/assignment-4-packages-and-shiny-apps-Qiuyuan0055/haiDash"
 
 <!-- badges: end -->
 
-The goal of haiDash is to …
-
 ## Installation
 
 You can install the development version of haiDash from
